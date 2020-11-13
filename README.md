@@ -92,6 +92,7 @@ Optional:
 
 
 ## Digital Wireframes & Mockups
+![Wireframe](https://imgur.com/gallery/pmsVyvF)
 <img src="https://imgur.com/gallery/pmsVyvF" height=200>
 
 
