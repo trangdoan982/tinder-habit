@@ -92,9 +92,7 @@ Optional:
 
 
 ## Digital Wireframes & Mockups
-![Wireframe](https://imgur.com/gallery/pmsVyvF)
-<img src="https://imgur.com/gallery/pmsVyvF" height=200>
-
+[Imgur](https://imgur.com/0NzCxOF)
 
 
 ### Further questions to research:
