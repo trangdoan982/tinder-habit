@@ -18,7 +18,7 @@ Imagine a merge of Tinder and Habit tracking app. You will be able to help yours
 - **Category:** Social & Productivity
 - **Mobile:** In a complete version, this app can access your location and suggest forming accountability group near you. You can also call your accountability buddy on the platform to co-work/ co-achieving your goals. Push notification to remind users of habit they're building.
 - **Story:** Let users set their goals and show them on their profiles. Users go through the matching process much like Tinder (swiping right if they think the other can be a good match). If both swipe right, they can schedule weekly meeting with a check-in template to track and encourage each other's progress. 
-- **Market:** Focus on young audience who are struggling to form new habits during isolation. This audience is likely goal-oriented, sociable folks.
+- **Market:** Focus on young audience who are struggling to form new habits or break old habits during isolation. This audience is likely goal-oriented, sociable folks.
 - **Habit:** Frequent checking-in with another users (positive social connection and pressure); dashboard that shows progress; push notification.
 - **Scope:** First we want to build the basic goal-setting and matching functions as the MVP. Other functions such as video call, psychological nudge will be built if we have time.
 
