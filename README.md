@@ -85,7 +85,10 @@ Optional:
 
 **Flow Navigation** (Screen to Screen)
 * Forced Log-in -> Account registration if no log in is available
-* Dashboard -> Schedule Meeting Button -> Schedule Meeting Screen
+* Log-in 
+	* First-time user: Drop-down list of habits to choose from -> Dashboard
+	* else -> Dashboard
+* Dashboard -> Pressed "Schedule New Meeting" Button -> Schedule Meeting Screen
 
 ## Wireframes
 <img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
