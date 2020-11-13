@@ -92,8 +92,7 @@ Optional:
 
 
 ## Digital Wireframes & Mockups
-[Imgur](https://imgur.com/0NzCxOF)
-
+[img]https://i.imgur.com/0NzCxOF.png[/img]
 
 ### Further questions to research:
 * Does each habit can only match with one partner? Or can allow multiple habits with one partner?
