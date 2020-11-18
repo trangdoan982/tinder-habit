@@ -34,7 +34,7 @@ Imagine a merge of Tinder and Habit tracking app. You will be able to help yours
     * Choose their goal from a drop-down list
 * Users can change habits they want to form
 * Users can see other users profile and go through the matching process like Tinder
-* In the dashboard screen, user can see the habits they are trying to form (cap at 3 habits for more realistic engagement), their current partners 
+* In the dashboard screen, user can see the habits they are trying to form/break (cap at 3 habits for more realistic engagement), their current partners 
 * User can schedule new meetings with partners via the connected Google account. 
     * The scheduled event has a checklist of questions to go through. The meeting should take no longer than 30 minutes
 
