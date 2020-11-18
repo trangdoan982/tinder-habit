@@ -35,6 +35,7 @@ Imagine a merge of Tinder and Habit tracking app. You will be able to help yours
 * Users can change habits they want to form
 * Users can see other users profile and go through the matching process like Tinder
 * In the dashboard screen, user can see the habits they are trying to form (cap at 3 habits for more realistic engagement), their current partners 
+    * Progress is calendar based: tap on a day to mark that you’ve done it
 * User can schedule new meetings with partners via the connected Google account. 
     * The scheduled event has a checklist of questions to go through. The meeting should take no longer than 30 minutes
 
@@ -49,6 +50,8 @@ Imagine a merge of Tinder and Habit tracking app. You will be able to help yours
 * Users can set notifications to remind them to do the tasks (eg: Push notification at 8:00 PM every day for workout)
 * Notifications that celebrate milestones 
 * Built-in video call/ voice call function so users don't need other apps such as Google Meet for frequent check-in
+* In dashboard that show progress, allow users to score each other's progress based on the weekly discussion
+     * Another view about the implementation progress
 
 ### 2. Screen Archetypes
 
@@ -57,7 +60,7 @@ Imagine a merge of Tinder and Habit tracking app. You will be able to help yours
 * Dashboard
     * Scheduled next meeting button
     * List of habits
-    * List of partners
+    * List of partners: If more than 3, use UICollection View for user to scroll right
 * Schedule Meeting:
     * Date
     * Time
