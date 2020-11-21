@@ -114,7 +114,7 @@ Optional:
 | objectId | String | unique id for each lists |
 | createdAt | DateTime | Date when the lists are created |
 | habitsNames | String |
- |
+
 
 **Matching Page
 
@@ -133,7 +133,6 @@ Optional:
 | timezone | string | Based on the timezone schedule the meeting |
 | Partner | string | Unique id for different users(partners) |
 | description | string |
- |
 
 ### Further questions to research:
 * Does each habit can only match with one partner? Or can allow multiple habits with one partner?
