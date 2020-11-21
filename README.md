@@ -134,6 +134,12 @@ Optional:
 | Partner | string | Unique id for different users(partners) |
 | description | string |
 
+### Networking
+#### List of network requests by screen
+   - Dashboard screen
+   - First time user screen
+   - Schedule meeting screen
+   - Matching screen
 ### Further questions to research:
 * Does each habit can only match with one partner? Or can allow multiple habits with one partner?
 * Best practices with accountability buddy? 
