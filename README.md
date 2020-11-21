@@ -99,7 +99,7 @@ Optional:
 
 ## Schema Design
 ### Models
-**Users:
+**Users:**
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -107,7 +107,7 @@ Optional:
 | password | Pointer to username | encrypted when stored in the Parse Cloud and never returned to any client request. |
 | createdAt | DateTime | date when the username/password is created (default field) |
 
-**List of Habits:
+**List of Habits:**
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -116,7 +116,7 @@ Optional:
 | habitsNames | String |
 
 
-**Matching Page
+**Matching Page**
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -124,7 +124,7 @@ Optional:
 | heartButton | Button | When clicked &quot;swipes&quot; right and matches |
 | crossButton | Button | When clicked &quot;swipes&quot; left |
 
-**Scheduling
+**Scheduling**
 
 | Property | Type | Description |
 | --- | --- | --- |
