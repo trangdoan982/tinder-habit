@@ -130,7 +130,7 @@ Optional:
 
 
 ### Matching Page
-    | Property      | Type     | Description |
+   | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | Image      | file   | Same image the user puts up in their profile |
    | heartButton     | Button| When clicked “swipes” right and matches
