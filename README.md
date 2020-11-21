@@ -105,3 +105,71 @@ Optional:
 * Best practices with accountability buddy? 
 * Best practices in forming habits?
 * Habit forming constraints?
+
+## Schema 
+
+#### USER
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | username      | String   | unique id for the user  (default field) |
+   | password      | Pointer to username   |encrypted when stored in the Parse Cloud and never returned to any client request.|
+   | createdAt     | DateTime | date when password/username is created (default field) |
+   
+   
+#### List of Habits:
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | objectId      | String   | unique id for each lists |
+   | createdAt     | DateTime| Date when the lists are created
+   |habitsCount | integer | Number of habits displayed 
+   |habitsNames|String
+
+
+
+
+### Matching Page
+    | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | Image      | file   | Same image the user puts up in their profile |
+   | heartButton     | Button| When clicked “swipes” right and matches
+   |crossButton  | Button |When clicked “swipes” left
+ 
+ 
+ ### Meeting
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | date      | Number   | Store in the date |
+   | time     | number| Store in the time
+   |timezone  | string |Based on the timezone schedule the meeting
+   | Partner     | string| Unique id for different users(partners)
+   |description  | string |
+  
+
+ 
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+ 
+
+
+ 
+ 
+
+
+ 
+
+
+   
