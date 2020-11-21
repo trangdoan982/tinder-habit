@@ -137,6 +137,11 @@ Optional:
 ### Networking
 #### List of network requests by screen
    - Dashboard screen
+   	+ Read/GET: Current habit progress in a calendar view
+	+ Read/GET: Current accountability buddy
+	+ Create/POST: Tap on a day on the calendar to mark progress
+	+ Delete: Tap on a day on the calendar to delete progress
+	
    - First time user screen
    - Schedule meeting screen
    - Matching screen
