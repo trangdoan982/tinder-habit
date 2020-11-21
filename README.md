@@ -94,8 +94,46 @@ Optional:
 * Dashboard -> Pressed "Schedule New Meeting" Button -> Schedule Meeting Screen
 
 
-## Digital Wireframes & Mockups
+### Digital Wireframes & Mockups
 <img src="https://i.imgur.com/0NzCxOF.png">
+
+## Schema Design
+### Models
+**Users:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| username | String | Unique Id for a user |
+| password | Pointer to username | encrypted when stored in the Parse Cloud and never returned to any client request. |
+| createdAt | DateTime | date when the username/password is created (default field) |
+
+**List of Habits:
+
+| Property | Type | Description |
+| --- | --- | --- |
+| objectId | String | unique id for each lists |
+| createdAt | DateTime | Date when the lists are created |
+| habitsNames | String |
+ |
+
+**Matching Page
+
+| Property | Type | Description |
+| --- | --- | --- |
+| Image | file | Same image the user puts up in their profile |
+| heartButton | Button | When clicked &quot;swipes&quot; right and matches |
+| crossButton | Button | When clicked &quot;swipes&quot; left |
+
+**Scheduling
+
+| Property | Type | Description |
+| --- | --- | --- |
+| date | Number | Store in the date |
+| time | number | Store in the time |
+| timezone | string | Based on the timezone schedule the meeting |
+| Partner | string | Unique id for different users(partners) |
+| description | string |
+ |
 
 ### Further questions to research:
 * Does each habit can only match with one partner? Or can allow multiple habits with one partner?
