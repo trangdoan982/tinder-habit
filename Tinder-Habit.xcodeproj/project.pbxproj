@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5F04AA1925699D7E00454B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA1825699D7E00454B4F /* AppDelegate.swift */; };
 		5F04AA1B25699D7E00454B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA1A25699D7E00454B4F /* SceneDelegate.swift */; };
-		5F04AA1D25699D7E00454B4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA1C25699D7E00454B4F /* ViewController.swift */; };
 		5F04AA2025699D7E00454B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F04AA1E25699D7E00454B4F /* Main.storyboard */; };
 		5F04AA2225699D7F00454B4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F04AA2125699D7F00454B4F /* Assets.xcassets */; };
 		5F04AA2525699D7F00454B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F04AA2325699D7F00454B4F /* LaunchScreen.storyboard */; };
 		5F04AA3025699D7F00454B4F /* Tinder_HabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA2F25699D7F00454B4F /* Tinder_HabitTests.swift */; };
 		5F04AA3B25699D7F00454B4F /* Tinder_HabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA3A25699D7F00454B4F /* Tinder_HabitUITests.swift */; };
+		5FA9CDBA2571633E00471174 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9CDB92571633E00471174 /* LoginViewController.swift */; };
+		5FA9CDBC25716A4900471174 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FA9CDBB25716A4900471174 /* GoogleService-Info.plist */; };
+		9C3AC79254A2DBD963C321F3 /* Pods_Tinder_Habit_Tinder_HabitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09679A3552191D466F88D3D5 /* Pods_Tinder_Habit_Tinder_HabitUITests.framework */; };
+		A0EFE36A67AA3B252AF42A90 /* Pods_Tinder_Habit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134BBF581ACB09C126195179 /* Pods_Tinder_Habit.framework */; };
+		D54FFD8DA74922855FBBD22E /* Pods_Tinder_HabitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AF27C820A158B4431B57D5 /* Pods_Tinder_HabitTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09679A3552191D466F88D3D5 /* Pods_Tinder_Habit_Tinder_HabitUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Habit_Tinder_HabitUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		134BBF581ACB09C126195179 /* Pods_Tinder_Habit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_Habit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A9FC8F59F619D2C4F5D22F0 /* Pods-Tinder-Habit-Tinder-HabitUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Habit-Tinder-HabitUITests.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests.release.xcconfig"; sourceTree = "<group>"; };
+		474C60815298FF2E8C32EE7F /* Pods-Tinder-HabitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-HabitTests.release.xcconfig"; path = "Target Support Files/Pods-Tinder-HabitTests/Pods-Tinder-HabitTests.release.xcconfig"; sourceTree = "<group>"; };
 		5F04AA1525699D7E00454B4F /* Tinder-Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Habit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F04AA1825699D7E00454B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F04AA1A25699D7E00454B4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5F04AA1C25699D7E00454B4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F04AA1F25699D7E00454B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F04AA2125699D7F00454B4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F04AA2425699D7F00454B4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,13 @@
 		5F04AA3625699D7F00454B4F /* Tinder-HabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tinder-HabitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F04AA3A25699D7F00454B4F /* Tinder_HabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_HabitUITests.swift; sourceTree = "<group>"; };
 		5F04AA3C25699D7F00454B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA9CDB92571633E00471174 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5FA9CDBB25716A4900471174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9A07512D0ECD82F59F8C3DCE /* Pods-Tinder-Habit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Habit.release.xcconfig"; path = "Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit.release.xcconfig"; sourceTree = "<group>"; };
+		B5AF27C820A158B4431B57D5 /* Pods_Tinder_HabitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinder_HabitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4602EB4C6EB5D47817E0C79 /* Pods-Tinder-Habit-Tinder-HabitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Habit-Tinder-HabitUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EB83AC75E367F1CF19D832B1 /* Pods-Tinder-HabitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-HabitTests.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-HabitTests/Pods-Tinder-HabitTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0B09D95E274AF690A642FCE /* Pods-Tinder-Habit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-Habit.debug.xcconfig"; path = "Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0EFE36A67AA3B252AF42A90 /* Pods_Tinder_Habit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54FFD8DA74922855FBBD22E /* Pods_Tinder_HabitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C3AC79254A2DBD963C321F3 /* Pods_Tinder_Habit_Tinder_HabitUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		538DF7BBC9FEB5DBFA83F1A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				134BBF581ACB09C126195179 /* Pods_Tinder_Habit.framework */,
+				09679A3552191D466F88D3D5 /* Pods_Tinder_Habit_Tinder_HabitUITests.framework */,
+				B5AF27C820A158B4431B57D5 /* Pods_Tinder_HabitTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F04AA0C25699D7E00454B4F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +110,8 @@
 				5F04AA2E25699D7F00454B4F /* Tinder-HabitTests */,
 				5F04AA3925699D7F00454B4F /* Tinder-HabitUITests */,
 				5F04AA1625699D7E00454B4F /* Products */,
+				E52E0E244A1EE724260BB5BE /* Pods */,
+				538DF7BBC9FEB5DBFA83F1A0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +128,14 @@
 		5F04AA1725699D7E00454B4F /* Tinder-Habit */ = {
 			isa = PBXGroup;
 			children = (
+				5FA9CDBB25716A4900471174 /* GoogleService-Info.plist */,
 				5F04AA1825699D7E00454B4F /* AppDelegate.swift */,
 				5F04AA1A25699D7E00454B4F /* SceneDelegate.swift */,
-				5F04AA1C25699D7E00454B4F /* ViewController.swift */,
 				5F04AA1E25699D7E00454B4F /* Main.storyboard */,
 				5F04AA2125699D7F00454B4F /* Assets.xcassets */,
 				5F04AA2325699D7F00454B4F /* LaunchScreen.storyboard */,
 				5F04AA2625699D7F00454B4F /* Info.plist */,
+				5FA9CDB92571633E00471174 /* LoginViewController.swift */,
 			);
 			path = "Tinder-Habit";
 			sourceTree = "<group>";
@@ -128,6 +158,19 @@
 			path = "Tinder-HabitUITests";
 			sourceTree = "<group>";
 		};
+		E52E0E244A1EE724260BB5BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0B09D95E274AF690A642FCE /* Pods-Tinder-Habit.debug.xcconfig */,
+				9A07512D0ECD82F59F8C3DCE /* Pods-Tinder-Habit.release.xcconfig */,
+				E4602EB4C6EB5D47817E0C79 /* Pods-Tinder-Habit-Tinder-HabitUITests.debug.xcconfig */,
+				1A9FC8F59F619D2C4F5D22F0 /* Pods-Tinder-Habit-Tinder-HabitUITests.release.xcconfig */,
+				EB83AC75E367F1CF19D832B1 /* Pods-Tinder-HabitTests.debug.xcconfig */,
+				474C60815298FF2E8C32EE7F /* Pods-Tinder-HabitTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F04AA3F25699D7F00454B4F /* Build configuration list for PBXNativeTarget "Tinder-Habit" */;
 			buildPhases = (
+				1804FD1BF29FE7B260472199 /* [CP] Check Pods Manifest.lock */,
 				5F04AA1125699D7E00454B4F /* Sources */,
 				5F04AA1225699D7E00454B4F /* Frameworks */,
 				5F04AA1325699D7E00454B4F /* Resources */,
+				A60484D07819B71CD532B9EE /* [CP] Embed Pods Frameworks */,
+				D7BBD4B6757C18A00DB23568 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +198,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F04AA4225699D7F00454B4F /* Build configuration list for PBXNativeTarget "Tinder-HabitTests" */;
 			buildPhases = (
+				7C048BBF9510815B2DE3FA68 /* [CP] Check Pods Manifest.lock */,
 				5F04AA2725699D7F00454B4F /* Sources */,
 				5F04AA2825699D7F00454B4F /* Frameworks */,
 				5F04AA2925699D7F00454B4F /* Resources */,
@@ -170,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F04AA4525699D7F00454B4F /* Build configuration list for PBXNativeTarget "Tinder-HabitUITests" */;
 			buildPhases = (
+				C34E704371839801D0FDBBF2 /* [CP] Check Pods Manifest.lock */,
 				5F04AA3225699D7F00454B4F /* Sources */,
 				5F04AA3325699D7F00454B4F /* Frameworks */,
 				5F04AA3425699D7F00454B4F /* Resources */,
+				0285084EE32ECF95DBDB1E00 /* [CP] Embed Pods Frameworks */,
+				B6A08F0C173C56E03E715CCA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F04AA2525699D7F00454B4F /* LaunchScreen.storyboard in Resources */,
+				5FA9CDBC25716A4900471174 /* GoogleService-Info.plist in Resources */,
 				5F04AA2225699D7F00454B4F /* Assets.xcassets in Resources */,
 				5F04AA2025699D7E00454B4F /* Main.storyboard in Resources */,
 			);
@@ -254,12 +305,149 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0285084EE32ECF95DBDB1E00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1804FD1BF29FE7B260472199 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinder-Habit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C048BBF9510815B2DE3FA68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinder-HabitTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A60484D07819B71CD532B9EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A08F0C173C56E03E715CCA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit-Tinder-HabitUITests/Pods-Tinder-Habit-Tinder-HabitUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C34E704371839801D0FDBBF2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tinder-Habit-Tinder-HabitUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7BBD4B6757C18A00DB23568 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tinder-Habit/Pods-Tinder-Habit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5F04AA1125699D7E00454B4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F04AA1D25699D7E00454B4F /* ViewController.swift in Sources */,
+				5FA9CDBA2571633E00471174 /* LoginViewController.swift in Sources */,
 				5F04AA1925699D7E00454B4F /* AppDelegate.swift in Sources */,
 				5F04AA1B25699D7E00454B4F /* SceneDelegate.swift in Sources */,
 			);
@@ -432,6 +620,7 @@
 		};
 		5F04AA4025699D7F00454B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0B09D95E274AF690A642FCE /* Pods-Tinder-Habit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +638,7 @@
 		};
 		5F04AA4125699D7F00454B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A07512D0ECD82F59F8C3DCE /* Pods-Tinder-Habit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +656,7 @@
 		};
 		5F04AA4325699D7F00454B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB83AC75E367F1CF19D832B1 /* Pods-Tinder-HabitTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +678,7 @@
 		};
 		5F04AA4425699D7F00454B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 474C60815298FF2E8C32EE7F /* Pods-Tinder-HabitTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +700,7 @@
 		};
 		5F04AA4625699D7F00454B4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4602EB4C6EB5D47817E0C79 /* Pods-Tinder-Habit-Tinder-HabitUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -527,6 +720,7 @@
 		};
 		5F04AA4725699D7F00454B4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A9FC8F59F619D2C4F5D22F0 /* Pods-Tinder-Habit-Tinder-HabitUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
