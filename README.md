@@ -145,8 +145,6 @@ Optional:
    - First time user screen
    - Schedule meeting screen
    - Matching screen
-### Further questions to research:
-* Does each habit can only match with one partner? Or can allow multiple habits with one partner?
-* Best practices with accountability buddy? 
-* Best practices in forming habits?
-* Habit forming constraints?
+## Unit 10 Sprint check-off
+- [x] User can log in using Google account
+- [x] User can see the dashboard of their progress
