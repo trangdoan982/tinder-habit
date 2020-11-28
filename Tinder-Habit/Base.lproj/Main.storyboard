@@ -10,37 +10,48 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-Sn-WB4" customClass="GIDSignInButton">
-                                <rect key="frame" x="104" y="409" width="206" height="79"/>
+                                <rect key="frame" x="104" y="408.5" width="206" height="79"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="TEe-gu-wF3"/>
                                     <constraint firstAttribute="height" constant="79" id="i89-Ua-V4t"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="googleBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9tc-nv-MSq"/>
+                                </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-BG-wEX">
+                                <rect key="frame" x="147" y="161.5" width="120" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118.5" id="l3C-ob-HU0"/>
+                                    <constraint firstAttribute="width" constant="120" id="xQF-Cl-sAK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8R2-BG-wEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gH-ch-jLR"/>
                             <constraint firstItem="0cu-Sn-WB4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dos-im-06l"/>
+                            <constraint firstItem="8R2-BG-wEX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="LQm-g6-3bS"/>
                             <constraint firstItem="0cu-Sn-WB4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wda-DU-GAi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="signInButton" destination="0cu-Sn-WB4" id="dOB-fE-541"/>
                         <segue destination="fz1-Pv-Qbv" kind="presentation" identifier="logInToHome" id="kJ7-OY-riT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Dashboard Dummy-->
         <scene sceneID="XCh-3s-yPd">
             <objects>
                 <tableViewController id="L12-w8-m3H" sceneMemberID="viewController">
@@ -64,6 +75,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -72,7 +84,7 @@
                             <outlet property="delegate" destination="L12-w8-m3H" id="i91-DB-frH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="O5n-wC-KUv"/>
+                    <navigationItem key="navigationItem" title="Dashboard Dummy" id="O5n-wC-KUv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y39-0a-6iV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,4 +107,7 @@
             <point key="canvasLocation" x="977" y="113"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+    </resources>
 </document>

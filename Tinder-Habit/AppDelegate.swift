@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         FirebaseApp.configure()
 
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
     return true
@@ -39,31 +39,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
 }
 
-extension AppDelegate: GIDSignInDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
-        
-        //handle sign-in errors
-        if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            } else {
-            print("error signing into Google \(error.localizedDescription)")
-            }
-        return
-        }
+//extension AppDelegate: GIDSignInDelegate {
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+//
+//        //handle sign-in errors
+//        if let error = error {
+//            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+//                print("The user has not signed in before or they have since signed out.")
+//            } else {
+//            print("error signing into Google \(error.localizedDescription)")
+//            }
+//        }
         
         // Get credential object using Google ID token and Google access token
-        guard let authentication = user.authentication else { return }
+        //guard let authentication = user.authentication else { return }
         
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
+        //let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
         
         // Authenticate with Firebase using the credential object
-        Auth.auth().signIn(with: credential) { (authResult, error) in
-            if let error = error {
-                print("authentication error \(error.localizedDescription)")
-            }
-        }
-    }
-}
+        //Auth.auth().signIn(with: credential) { (authResult, error) in
+            //if let error = error {
+                //print("authentication error \(error.localizedDescription)")
+            //}
+        //}
+//    }
+//}
 
