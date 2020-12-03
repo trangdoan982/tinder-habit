@@ -26,19 +26,34 @@
                                 <rect key="frame" x="0.0" y="74" width="173" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7E-zg-IO9">
+                                <rect key="frame" x="0.0" y="211" width="64" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bioText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZw-RR-Gk3">
+                                <rect key="frame" x="0.0" y="239" width="394" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="noC-EB-LP8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="calendar" catalog="system" id="Eq4-BB-vYa"/>
                     <connections>
+                        <outlet property="bioText" destination="TZw-RR-Gk3" id="meR-1r-PF4"/>
                         <outlet property="profileImage" destination="Ryj-nZ-8bm" id="kJO-km-wQ6"/>
                         <outlet property="userName" destination="J0z-xB-0t6" id="9Ee-wD-9no"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tmu-cu-tWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-481.15942028985512" y="61.607142857142854"/>
+            <point key="canvasLocation" x="-337.68115942028987" y="81.696428571428569"/>
         </scene>
         <!--Matching-->
         <scene sceneID="mGx-lY-X7Z">

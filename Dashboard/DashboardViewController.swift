@@ -16,12 +16,14 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     
-
+    @IBOutlet weak var bioText: UILabel!
     
     
     let userInfo:[String:String] = [
       "username": "Hello, Robert",
-      "profileImageURL": "https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg"
+      "profileImageURL": "https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg",
+        "biotext" : "Robert wants to workout 4-5 days a week"
+      
     ]
     
     
@@ -52,7 +54,7 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
           super.viewDidLoad()
           updateUI()
         view.addSubview(lineChartView)
-        lineChartView.center(in: view, offset: CGPoint(x: 0, y: 45))
+        lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
         
         lineChartView.width(350)
         lineChartView.height(250)
@@ -64,6 +66,7 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
     func updateUI(){
       profileImage.kf.setImage(with: URL(string: self.userInfo["profileImageURL"]!))
       self.userName.text = userInfo["username"]
+        self.bioText.text = userInfo["biotext"]
     }
     
     

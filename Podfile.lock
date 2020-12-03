@@ -1,0 +1,28 @@
+PODS:
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - Kingfisher (5.15.7):
+    - Kingfisher/Core (= 5.15.7)
+  - Kingfisher/Core (5.15.7)
+  - TinyConstraints (4.0.1)
+
+DEPENDENCIES:
+  - Charts
+  - Kingfisher
+  - TinyConstraints
+
+SPEC REPOS:
+  trunk:
+    - Charts
+    - Kingfisher
+    - TinyConstraints
+
+SPEC CHECKSUMS:
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
+
+PODFILE CHECKSUM: fae07a19170088a5880e7c44a7a80952b0198177
+
+COCOAPODS: 1.9.3
