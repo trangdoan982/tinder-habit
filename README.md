@@ -151,3 +151,4 @@ Optional:
 
 ## Unit 10 Sprint check-off
 - [x] User can create event on their Google calendar via app
+- [x] User can swipe to match with accountability buddy
