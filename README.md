@@ -148,3 +148,6 @@ Optional:
 ## Unit 10 Sprint check-off
 - [x] User can log in using Google account
 - [x] User can see the dashboard of their progress
+
+## Unit 10 Sprint check-off
+- [x] User can create event on their Google calendar via app
