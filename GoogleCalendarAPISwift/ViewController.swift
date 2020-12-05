@@ -28,6 +28,8 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         
         // Add the sign-in button.
         view.addSubview(signInButton)
+        signInButton.center = CGPoint(x: view.frame.size.width  / 2,
+        y: view.frame.size.height / 2)
         
         // Add a UITextView to display output.
         output.frame = view.bounds
@@ -65,7 +67,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     // Display the start dates and event summaries in the UITextView
-    func displayResultWithTicket(
+    @objc func displayResultWithTicket(
         ticket: GTLRServiceTicket,
         finishedWithObject response : GTLRCalendar_Events,
         error : NSError?) {
@@ -119,7 +121,7 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
             if error == nil {
                 print("Event inserted")
             } else {
-                print(error)
+                print(error!)
             }
         }
     }
@@ -137,11 +139,11 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
         let alert = UIAlertController(
             title: title,
             message: message,
-            preferredStyle: UIAlertControllerStyle.alert
+            preferredStyle: UIAlertController.Style.alert
         )
         let ok = UIAlertAction(
             title: "OK",
-            style: UIAlertActionStyle.default,
+            style: UIAlertAction.Style.default,
             handler: nil
         )
         alert.addAction(ok)
