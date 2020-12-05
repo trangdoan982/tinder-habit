@@ -12,16 +12,17 @@ import GoogleSignIn
 
 
 class LoginViewController: UIViewController, GIDSignInDelegate {
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
-        print(error.localizedDescription)
+            print("Error is \(error.localizedDescription)")
         return
         }
         guard let auth = user.authentication else { return }
         let credentials = GoogleAuthProvider.credential(withIDToken: auth.idToken, accessToken: auth.accessToken)
         Auth.auth().signIn(with: credentials) { (authResult, error) in
         if let error = error {
-        print(error.localizedDescription)
+            print(error.localizedDescription)
         } else {
             print("Login successful")
             self.performSegue(withIdentifier: "logInToHome", sender: self)
@@ -30,7 +31,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     }
          
     @IBAction func googleBtnTapped(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn()
+//        GIDSignIn.sharedInstance().signIn()
     }
     
     

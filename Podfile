@@ -13,6 +13,9 @@ target 'Tinder-Habit' do
   pod 'FirebaseUI/Auth'
 
   pod 'FirebaseUI/Google'
+  
+  pod 'DropDown'
+  pod 'GoogleAPIClientForREST/Calendar'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 
