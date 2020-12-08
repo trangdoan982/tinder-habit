@@ -10,6 +10,8 @@ target 'Dashboard' do
   pod 'Charts'
   pod 'Kingfisher'
   pod 'TinyConstraints'
+  pod 'Koloda'
+
 
   target 'DashboardTests' do
     inherit! :search_paths
