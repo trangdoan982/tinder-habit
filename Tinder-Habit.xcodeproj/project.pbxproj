@@ -14,6 +14,8 @@
 		5F04AA2525699D7F00454B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F04AA2325699D7F00454B4F /* LaunchScreen.storyboard */; };
 		5F04AA3025699D7F00454B4F /* Tinder_HabitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA2F25699D7F00454B4F /* Tinder_HabitTests.swift */; };
 		5F04AA3B25699D7F00454B4F /* Tinder_HabitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA3A25699D7F00454B4F /* Tinder_HabitUITests.swift */; };
+		5FA9240C257FB46F00E6799B /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9240B257FB46F00E6799B /* UserModel.swift */; };
+		5FA9240E257FC19800E6799B /* UserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9240D257FC19800E6799B /* UserHandler.swift */; };
 		5FA9CDBA2571633E00471174 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA9CDB92571633E00471174 /* LoginViewController.swift */; };
 		5FA9CDBC25716A4900471174 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FA9CDBB25716A4900471174 /* GoogleService-Info.plist */; };
 		5FAC4E2D257BDA560034BE1E /* EditNewMeetingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAC4E2C257BDA560034BE1E /* EditNewMeetingController.swift */; };
@@ -58,6 +60,8 @@
 		5F04AA3625699D7F00454B4F /* Tinder-HabitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tinder-HabitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F04AA3A25699D7F00454B4F /* Tinder_HabitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tinder_HabitUITests.swift; sourceTree = "<group>"; };
 		5F04AA3C25699D7F00454B4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA9240B257FB46F00E6799B /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5FA9240D257FC19800E6799B /* UserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHandler.swift; sourceTree = "<group>"; };
 		5FA9CDB92571633E00471174 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5FA9CDBB25716A4900471174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5FAC4E2C257BDA560034BE1E /* EditNewMeetingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNewMeetingController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				5FA9CDB92571633E00471174 /* LoginViewController.swift */,
 				5FC144012579635700EA9D81 /* NewMeetingViewController.swift */,
 				5FAC4E2C257BDA560034BE1E /* EditNewMeetingController.swift */,
+				5FA9240B257FB46F00E6799B /* UserModel.swift */,
+				5FA9240D257FC19800E6799B /* UserHandler.swift */,
 			);
 			path = "Tinder-Habit";
 			sourceTree = "<group>";
@@ -455,8 +461,10 @@
 			files = (
 				5FA9CDBA2571633E00471174 /* LoginViewController.swift in Sources */,
 				5F04AA1925699D7E00454B4F /* AppDelegate.swift in Sources */,
+				5FA9240E257FC19800E6799B /* UserHandler.swift in Sources */,
 				5F04AA1B25699D7E00454B4F /* SceneDelegate.swift in Sources */,
 				5FC144022579635700EA9D81 /* NewMeetingViewController.swift in Sources */,
+				5FA9240C257FB46F00E6799B /* UserModel.swift in Sources */,
 				5FAC4E2D257BDA560034BE1E /* EditNewMeetingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,13 @@ import UIKit
 import GoogleSignIn
 import Firebase
 import FirebaseUI
+import GoogleAPIClientForREST
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
     
     var window: UIWindow?
+    private let scopes = [kGTLRAuthScopeCalendar]
 
     func application(_ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions:
@@ -24,6 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         FirebaseApp.configure()
 
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        //Add scope
+        
+        GIDSignIn.sharedInstance()?.scopes = scopes
+        
+        
 //        GIDSignIn.sharedInstance().delegate = self
         //ADD SCOPE HERE
         //Ref:https://stackoverflow.com/questions/38245484/ios-google-sign-in-not-getting-profile-scope

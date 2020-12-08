@@ -7,9 +7,8 @@ target 'Tinder-Habit' do
 
   # Pods for Tinder-Habit
   pod 'GoogleSignIn'
-  #pod 'GoogleAPIClientForREST/Calendar', '~> 1.2.1'
-  # add the Firebase pod for Google Analytics
-  pod 'Firebase/Analytics'
+
+  pod 'Firebase/Database'
   pod 'FirebaseUI/Auth'
 
   pod 'FirebaseUI/Google'

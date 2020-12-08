@@ -177,7 +177,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doneCreateNewMeeting:" destination="DCK-j7-nFm" eventType="touchUpInside" id="6ly-Wo-Q0K"/>
-                                    <segue destination="ygr-8F-ODo" kind="presentation" identifier="doneCreateMeeting" id="lvm-lr-Jdu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,6 +193,8 @@
                         <outlet property="buddySelection" destination="q5B-f2-Blq" id="xaY-Ud-moR"/>
                         <outlet property="buddyTap" destination="TK2-0I-onI" id="6de-Dg-YPJ"/>
                         <outlet property="chosenBuddy" destination="jRJ-is-aub" id="WkG-4t-Nzh"/>
+                        <outlet property="descriptionTextView" destination="A8Y-Cb-Dyt" id="CGc-J5-j92"/>
+                        <outlet property="eventName" destination="Qjb-5C-l0T" id="GGb-F6-dAL"/>
                         <outlet property="pickTimeField" destination="ZRI-Sf-6di" id="zh3-L7-Hdd"/>
                     </connections>
                 </viewController>
@@ -239,9 +240,6 @@
             <point key="canvasLocation" x="1286.9565217391305" y="112.5"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="lvm-lr-Jdu"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="person.2" catalog="system" width="128" height="81"/>
     </resources>

@@ -8,8 +8,11 @@
 
 import UIKit
 import DropDown
+import GoogleAPIClientForREST
+import GoogleSignIn
 
 class EditNewMeetingController: UIViewController {
+    
     
     let menu: DropDown = {
         let menu = DropDown()
@@ -20,6 +23,10 @@ class EditNewMeetingController: UIViewController {
     @IBOutlet weak var buddySelection: UIView!
     @IBOutlet var buddyTap: UITapGestureRecognizer!
     @IBOutlet weak var chosenBuddy: UILabel!
+    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    
+    private let service = GTLRCalendarService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +75,30 @@ class EditNewMeetingController: UIViewController {
     }
 
     @IBAction func doneCreateNewMeeting(_ sender: Any) {
-        self.performSegue(withIdentifier: "doneCreateMeeting", sender: self)
+//        addNewEventToGGCalendar(name: eventName.text!, time: pickTimeField.text!, description: descriptionTextView.text!)
+        
+        self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+//    func addNewEventToGGCalendar(name: String, time:String, description:String ) {
+//        let calendarEvent = GTLRCalendar_Event()
+//
+//        calendarEvent.summary = name
+//        calendarEvent.descriptionProperty = description
+//        calendarEvent.organizer = GIDSignIn.sharedInstance()?.currentUser
+//
+//        let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
+//
+//        service.executeQuery(insertQuery) { (ticket, object, error) in
+//            if error == nil {
+//                print("Event inserted")
+//            } else {
+//                print("Error is \(error!)")
+//            }
+//        }
+//    }
+//
+    
 }
