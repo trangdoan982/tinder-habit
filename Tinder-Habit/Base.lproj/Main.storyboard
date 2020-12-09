@@ -71,6 +71,10 @@
                                     <segue destination="LwX-3B-STJ" kind="presentation" identifier="editMeeting" id="cMN-2m-bjc"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-G2-isd">
+                                <rect key="frame" x="87" y="137" width="240" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -80,6 +84,9 @@
                         <viewLayoutGuide key="safeArea" id="Dtd-kJ-lhS"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dummy Dashboard" id="XVw-Pi-Gxp"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="fZz-G2-isd" id="mIY-3s-MDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROG-wG-CEm" sceneMemberID="firstResponder"/>
             </objects>

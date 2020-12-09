@@ -38,8 +38,10 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 
                 //store the image
                 if let currentUser = GIDSignIn.sharedInstance()?.currentUser {
-                    let profileImageUrl = currentUser.profile.imageURL(withDimension: 500)
-                    let tinderHabitUser = User(googleUserId: currentUser.userID, profileImageUrl: profileImageUrl!, fullName: currentUser.profile.name)
+                    let profileImageUrl = currentUser.profile.imageURL(withDimension: 500)!
+                    let fullName = currentUser.profile.name!
+                    let tinderHabitUser = User(googleUserId: currentUser.userID!, profileImageUrl: profileImageUrl, fullName: fullName)
+                    
                     self.userHandler.storeUser(user: tinderHabitUser)
                 }
                 

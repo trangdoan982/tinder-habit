@@ -9,38 +9,33 @@
 import UIKit
 import GoogleSignIn
 import Firebase
+import Kingfisher
+//import FirebaseDatabase
+
 
 class NewMeetingViewController: UIViewController {
-
+    var userHandler:UserHandler = UserHandler()
+    let databaseRef = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        let user: GIDGoogleUser = GIDSignIn.sharedInstance()!.currentUser
-//        let fullName = user.profile.name
-//        let email = user.profile.email
-//        if user.profile.hasImage {
-//        let userDP = user.profile.imageURL(withDimension: 200)
-//            self.sampleImageView.sd_setImage(with: userDP, placeholderImage: UIImage(named: "default-profile”))
-//        } else {
-//            self.sampleImageView.image = UIImage(named: "default-profile”)
-//        }
+        
+        userHandler.getAllUsers()
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func editMeeting(_ sender: Any) {
         self.performSegue(withIdentifier: "editMeeting", sender: self)
     }
     
-//    @IBAction func signOut(_ sender: Any) {
-//        let firebaseAuth = Auth.auth()
-//        do {
-//          try firebaseAuth.signOut()
-//        } catch let signOutError as NSError {
-//          print ("Error signing out: %@", signOutError)
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    
+//    databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
+//        guard let value = snapshot.value as? User else {
+//            return
 //        }
-//
-//        self.dismiss(animated: true, completion: nil)
-//    }
-//
+//        let imageUrl = value.profileImageUrl
+//        print("image url is \(String(describing: imageUrl?.absoluteString))")
+//    })
 }

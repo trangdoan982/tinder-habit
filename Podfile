@@ -8,13 +8,14 @@ target 'Tinder-Habit' do
   # Pods for Tinder-Habit
   pod 'GoogleSignIn'
 
-  pod 'Firebase/Database'
+#  pod 'Firebase/Database'
   pod 'FirebaseUI/Auth'
-
+  pod 'Firebase'
   pod 'FirebaseUI/Google'
   
   pod 'DropDown'
   pod 'GoogleAPIClientForREST/Calendar'
+  pod 'Kingfisher'
   # add pods for any other desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
 
