@@ -29,30 +29,19 @@ class UserHandler {
         return user
     }
     
-    func getUser() -> [User] {
-        //retrieve from Firebase
-        
-        return [User(googleUserId: "123", profileImageUrl: URL(string: "https://image.url")!, fullName: "Fake user")]
-    }
-    
     func getAllUsers() {
         databaseRef.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
           // Get user value
-          let value = snapshot.value as? NSDictionary
-          
+            let value = snapshot.value as? NSDictionary
+         
+            }) { (error) in
+              print(error.localizedDescription)
+          }
             
-            //for each raw user -> put the user in the array
-//            let rawUsers = value!.allValues as [NSDictionary]
-//            let users = rawUsers.map { (rawUser) -> User in
-//                let user = User(googleUserId: rawUser["googleUserId"] as! String, profileImageUrl: rawUser["profileImageUrl"] as! String, fullName: rawUser["fullName"] as! String)
-//
-//            }
-        
-
-          // ...
-          }) { (error) in
-            print(error.localizedDescription)
-        }
+            
+            
+            
+            
 //    func getProfileImageUrl(user:User) {
 //
 //        databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
