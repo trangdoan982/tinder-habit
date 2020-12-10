@@ -1,0 +1,6 @@
+framework module Pods_Tinder_Habit {
+  umbrella header "Pods-Tinder-Habit-umbrella.h"
+
+  export *
+  module * { export * }
+}

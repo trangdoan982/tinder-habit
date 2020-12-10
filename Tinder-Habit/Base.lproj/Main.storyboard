@@ -10,89 +10,223 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cu-Sn-WB4" customClass="GIDSignInButton">
-                                <rect key="frame" x="104" y="409" width="206" height="79"/>
+                                <rect key="frame" x="104" y="408.5" width="206" height="79"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="TEe-gu-wF3"/>
                                     <constraint firstAttribute="height" constant="79" id="i89-Ua-V4t"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="googleBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9tc-nv-MSq"/>
+                                </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-BG-wEX">
+                                <rect key="frame" x="147" y="161.5" width="120" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118.5" id="l3C-ob-HU0"/>
+                                    <constraint firstAttribute="width" constant="120" id="xQF-Cl-sAK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8R2-BG-wEX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8gH-ch-jLR"/>
                             <constraint firstItem="0cu-Sn-WB4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dos-im-06l"/>
+                            <constraint firstItem="8R2-BG-wEX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="LQm-g6-3bS"/>
                             <constraint firstItem="0cu-Sn-WB4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Wda-DU-GAi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="signInButton" destination="0cu-Sn-WB4" id="dOB-fE-541"/>
-                        <segue destination="fz1-Pv-Qbv" kind="presentation" identifier="logInToHome" id="kJ7-OY-riT"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="XCh-3s-yPd">
+        <!--Dummy Dashboard-->
+        <scene sceneID="2BM-wd-AVj">
             <objects>
-                <tableViewController id="L12-w8-m3H" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yES-cY-Mhq">
+                <viewController storyboardIdentifier="newMeetingViewController" id="ygr-8F-ODo" customClass="NewMeetingViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MZq-SJ-iSu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic4-H1-6nH">
+                                <rect key="frame" x="128" y="432" width="158" height="32"/>
+                                <color key="backgroundColor" red="0.38737804380000002" green="0.64752822850000002" blue="0.81151970839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Create New Meeting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editMeeting:" destination="ygr-8F-ODo" eventType="touchUpInside" id="4la-DM-i7k"/>
+                                    <segue destination="DCK-j7-nFm" kind="presentation" identifier="editMeeting" id="BSs-ML-hhU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-G2-isd">
+                                <rect key="frame" x="87" y="137" width="240" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ic4-H1-6nH" firstAttribute="centerX" secondItem="MZq-SJ-iSu" secondAttribute="centerX" id="6Ch-am-tWM"/>
+                            <constraint firstItem="Ic4-H1-6nH" firstAttribute="centerY" secondItem="MZq-SJ-iSu" secondAttribute="centerY" id="yDq-QA-51Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dtd-kJ-lhS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dummy Dashboard" id="XVw-Pi-Gxp"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="fZz-G2-isd" id="qjN-0k-7dn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROG-wG-CEm" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2197.1014492753625" y="112.5"/>
+        </scene>
+        <!--Create Meeting-->
+        <scene sceneID="MDM-xY-fWd">
+            <objects>
+                <viewController id="DCK-j7-nFm" customClass="EditNewMeetingController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vav-VU-Wkh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEf-Mv-gBm">
+                                <rect key="frame" x="34" y="56" width="117" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qjb-5C-l0T">
+                                <rect key="frame" x="54" y="90" width="299" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My buddy this time is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIO-5Z-XmS">
+                                <rect key="frame" x="34" y="150" width="173" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5B-f2-Blq">
+                                <rect key="frame" x="54" y="188" width="299" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRJ-is-aub">
+                                        <rect key="frame" x="35" y="11" width="211" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="TK2-0I-onI" appends="YES" id="uXu-U4-Bhq"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQl-SC-Jg0">
+                                <rect key="frame" x="34" y="269" width="152" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZRI-Sf-6di">
+                                <rect key="frame" x="62" y="351" width="291" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT9-kL-vXo">
+                                <rect key="frame" x="62" y="308" width="80" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hen-Hy-dYa">
+                                <rect key="frame" x="34" y="440" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A8Y-Cb-Dyt">
+                                <rect key="frame" x="54" y="491" width="306" height="212"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="uow-nK-NBI"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ef3-SM-4HJ">
+                                <rect key="frame" x="99" y="740" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38737804380000002" green="0.64752822850000002" blue="0.81151970839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Create Check-in Meeting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneCreateNewMeeting:" destination="DCK-j7-nFm" eventType="touchUpInside" id="6ly-Wo-Q0K"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="278" id="LbU-ct-J1l">
-                                <rect key="frame" x="0.0" y="28" width="414" height="278"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LbU-ct-J1l" id="5vT-dA-t29">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="278"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4z-Pl-4Qd">
-                                            <rect key="frame" x="66" y="33" width="222" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="L12-w8-m3H" id="ewX-fk-nIG"/>
-                            <outlet property="delegate" destination="L12-w8-m3H" id="i91-DB-frH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="O5n-wC-KUv"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y39-0a-6iV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="9Q2-sH-w56" firstAttribute="bottom" secondItem="A8Y-Cb-Dyt" secondAttribute="bottom" constant="105" id="JYG-HV-D6a"/>
+                            <constraint firstItem="A8Y-Cb-Dyt" firstAttribute="centerX" secondItem="Vav-VU-Wkh" secondAttribute="centerX" id="goA-QT-TW9"/>
+                            <constraint firstItem="A8Y-Cb-Dyt" firstAttribute="leading" secondItem="9Q2-sH-w56" secondAttribute="leading" constant="54" id="zsP-L4-U1u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Q2-sH-w56"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Meeting" id="RmE-IL-amO"/>
+                    <connections>
+                        <outlet property="buddySelection" destination="q5B-f2-Blq" id="xaY-Ud-moR"/>
+                        <outlet property="buddyTap" destination="TK2-0I-onI" id="6de-Dg-YPJ"/>
+                        <outlet property="chosenBuddy" destination="jRJ-is-aub" id="WkG-4t-Nzh"/>
+                        <outlet property="descriptionTextView" destination="A8Y-Cb-Dyt" id="CGc-J5-j92"/>
+                        <outlet property="eventName" destination="Qjb-5C-l0T" id="GGb-F6-dAL"/>
+                        <outlet property="pickTimeField" destination="ZRI-Sf-6di" id="zh3-L7-Hdd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhd-Im-pSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TK2-0I-onI"/>
             </objects>
-            <point key="canvasLocation" x="1916" y="113"/>
+            <point key="canvasLocation" x="3232" y="113"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="r4Y-6m-Tn0">
+        <scene sceneID="rUu-wC-VDF">
             <objects>
-                <navigationController id="fz1-Pv-Qbv" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qXj-BI-W9W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c81-Ou-Lxl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="05i-hk-uDZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="L12-w8-m3H" kind="relationship" relationship="rootViewController" id="YmW-Id-Dug"/>
+                        <segue destination="ygr-8F-ODo" kind="relationship" relationship="rootViewController" id="nIs-d1-UgO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="848-tj-b97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YHq-5S-Hm0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="977" y="113"/>
+            <point key="canvasLocation" x="1286.9565217391305" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.2" catalog="system" width="128" height="81"/>
+    </resources>
 </document>
