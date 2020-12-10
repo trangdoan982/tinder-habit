@@ -9,21 +9,23 @@
 import UIKit
 
 class MatchingViewController: UIViewController {
+  
+  var userHandler = FakeUserHandler()   //
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     // Do any additional setup after loading the view.
   }
-  var profileImageURLStrings: [String] = []
+  var potentialMatches: [User] = []
   var profileBio: [String] = []
   override func viewDidLoad() {
     super.viewDidLoad()
-    profileImageURLStrings = [
-      "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/2078265/pexels-photo-2078265.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/1310522/pexels-photo-1310522.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-    ]
+    userHandler.getAllUsers { (users) in
+      potentialMatches = users
+      // kolodaView.reloadData()
+    }
     
     kolodaView.dataSource = self
     kolodaView.delegate = self
@@ -36,11 +38,16 @@ class MatchingViewController: UIViewController {
   }
   
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
-    print("selected \(index)")
+    let selectedUser = users[index]
+    
+    userHandler.createMatch(userId1: selectedUser!.googleUserId) {
+      success in
+      print("successfully stored? \(success)")
+    }
   }
   
   func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
-    return profileImageURLStrings.count
+    return potentialMatches.count
   }
   
   func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
@@ -49,8 +56,8 @@ class MatchingViewController: UIViewController {
   
   func koloda(_ koloda: KolodaView, viewForCardAt index: Int) -> UIView {
     let imageView = UIImageView()
-    let url = URL(string: profileImageURLStrings[index])
-    imageView.kf.setImage(with: url)
+    let user = potentialMatches[index]
+    imageView.kf.setImage(with: user.profileImageUrl)
     return imageView
   }
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4B41B8102582B1D700B27A10 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B41B80F2582B1D700B27A10 /* DashboardViewController.swift */; };
 		4B41B8152582B24D00B27A10 /* MatchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B41B8142582B24D00B27A10 /* MatchingViewController.swift */; };
+		4B41B87D2582B5FB00B27A10 /* FakeUserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B41B87C2582B5FB00B27A10 /* FakeUserHandler.swift */; };
 		5F04AA1925699D7E00454B4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA1825699D7E00454B4F /* AppDelegate.swift */; };
 		5F04AA1B25699D7E00454B4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F04AA1A25699D7E00454B4F /* SceneDelegate.swift */; };
 		5F04AA2025699D7E00454B4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F04AA1E25699D7E00454B4F /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		474C60815298FF2E8C32EE7F /* Pods-Tinder-HabitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinder-HabitTests.release.xcconfig"; path = "Target Support Files/Pods-Tinder-HabitTests/Pods-Tinder-HabitTests.release.xcconfig"; sourceTree = "<group>"; };
 		4B41B80F2582B1D700B27A10 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		4B41B8142582B24D00B27A10 /* MatchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchingViewController.swift; sourceTree = "<group>"; };
+		4B41B87C2582B5FB00B27A10 /* FakeUserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserHandler.swift; sourceTree = "<group>"; };
 		5F04AA1525699D7E00454B4F /* Tinder-Habit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tinder-Habit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F04AA1825699D7E00454B4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F04AA1A25699D7E00454B4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				5FA9CDB92571633E00471174 /* LoginViewController.swift */,
 				5FC144012579635700EA9D81 /* NewMeetingViewController.swift */,
 				5FAC4E2C257BDA560034BE1E /* EditNewMeetingController.swift */,
+				4B41B87C2582B5FB00B27A10 /* FakeUserHandler.swift */,
 				5FA9240B257FB46F00E6799B /* UserModel.swift */,
 				5FA9240D257FC19800E6799B /* UserHandler.swift */,
 			);
@@ -473,6 +476,7 @@
 				5FC144022579635700EA9D81 /* NewMeetingViewController.swift in Sources */,
 				5FA9240C257FB46F00E6799B /* UserModel.swift in Sources */,
 				5FAC4E2D257BDA560034BE1E /* EditNewMeetingController.swift in Sources */,
+				4B41B87D2582B5FB00B27A10 /* FakeUserHandler.swift in Sources */,
 				4B41B8102582B1D700B27A10 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

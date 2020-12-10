@@ -17,7 +17,9 @@ class UserHandler {
     
     let databaseRef = Database.database().reference()
     
-    func storeUser(user:User) -> User {
+  
+  func getAllUsers(closure: ([User]) -> Void) {}
+  func storeUser(user: User, closure: (Bool) -> Void) {
         //send to Firebase
         
         //set key "profileImageUrl" to
@@ -28,6 +30,9 @@ class UserHandler {
         
         return user
     }
+  
+    func createMatch(userID1:String, userID2:String, closure: (Bool) -> Void) {}
+    func getCurrentUser() -> User { }
     
     func getAllUsers() {
         databaseRef.child("users").observeSingleEvent(of: .value, with: { (snapshot) in

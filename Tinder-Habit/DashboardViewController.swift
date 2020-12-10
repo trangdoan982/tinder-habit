@@ -9,6 +9,9 @@
 import UIKit
 
 class DashboardViewController: UIViewController {
+  
+  var userHandler:UserHandler = FakeUserHandler()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     updateUI()
@@ -19,13 +22,13 @@ class DashboardViewController: UIViewController {
     lineChartView.height(250)
     
     setData()
+    self.user = userHandler.currentUser()
   }
   
   let userInfo:[String:String] = [
     "username": "Hello, Robert",
     "profileImageURL": "https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg",
     "biotext" : "Robert wants to workout 4-5 days a week"
-    
   ]
   
   
