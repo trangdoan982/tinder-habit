@@ -42,11 +42,3 @@ class NewMeetingViewController: UIViewController, PassDataDelegate {
     
     
 }
-//    databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
-//        guard let value = snapshot.value as? User else {
-//            return
-//        }
-//        let imageUrl = value.profileImageUrl
-//        print("image url is \(String(describing: imageUrl?.absoluteString))")
-//    })
-
