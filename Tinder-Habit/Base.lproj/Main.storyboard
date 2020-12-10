@@ -43,9 +43,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <segue destination="c81-Ou-Lxl" kind="presentation" identifier="logInToHome" id="Dqa-Mr-Jv4"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,13 +51,13 @@
         <!--Dummy Dashboard-->
         <scene sceneID="2BM-wd-AVj">
             <objects>
-                <viewController id="ygr-8F-ODo" customClass="NewMeetingViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="newMeetingViewController" id="ygr-8F-ODo" customClass="NewMeetingViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MZq-SJ-iSu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ic4-H1-6nH">
-                                <rect key="frame" x="128" y="405" width="158" height="32"/>
+                                <rect key="frame" x="128" y="432" width="158" height="32"/>
                                 <color key="backgroundColor" red="0.38737804380000002" green="0.64752822850000002" blue="0.81151970839999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <state key="normal" title="Create New Meeting">
@@ -68,7 +65,7 @@
                                 </state>
                                 <connections>
                                     <action selector="editMeeting:" destination="ygr-8F-ODo" eventType="touchUpInside" id="4la-DM-i7k"/>
-                                    <segue destination="LwX-3B-STJ" kind="presentation" identifier="editMeeting" id="cMN-2m-bjc"/>
+                                    <segue destination="DCK-j7-nFm" kind="presentation" identifier="editMeeting" id="BSs-ML-hhU"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZz-G2-isd">
@@ -85,7 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dummy Dashboard" id="XVw-Pi-Gxp"/>
                     <connections>
-                        <outlet property="profileImageView" destination="fZz-G2-isd" id="mIY-3s-MDq"/>
+                        <outlet property="profileImageView" destination="fZz-G2-isd" id="qjN-0k-7dn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROG-wG-CEm" sceneMemberID="firstResponder"/>
@@ -208,25 +205,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zhd-Im-pSp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="TK2-0I-onI"/>
             </objects>
-            <point key="canvasLocation" x="3893" y="629"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wOZ-PK-g5E">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwX-3B-STJ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ojl-xk-sbz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="DCK-j7-nFm" kind="relationship" relationship="rootViewController" id="5vP-eV-cKr"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aKM-jJ-tQ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3049" y="629"/>
+            <point key="canvasLocation" x="3232" y="113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rUu-wC-VDF">
@@ -234,7 +213,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c81-Ou-Lxl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="05i-hk-uDZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

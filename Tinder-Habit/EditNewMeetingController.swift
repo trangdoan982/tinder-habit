@@ -30,7 +30,7 @@ class EditNewMeetingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         menu.anchorView = buddySelection
         
         buddyTap.numberOfTapsRequired = 1
@@ -73,32 +73,32 @@ class EditNewMeetingController: UIViewController {
         pickTimeField.text = "\(timePicker.date)"
         self.view.endEditing(true)
     }
-
+    
     @IBAction func doneCreateNewMeeting(_ sender: Any) {
-//        addNewEventToGGCalendar(name: eventName.text!, time: pickTimeField.text!, description: descriptionTextView.text!)
+        //        addNewEventToGGCalendar(name: eventName.text!, time: pickTimeField.text!, description: descriptionTextView.text!)
         
         self.dismiss(animated: true, completion: nil)
     }
     
     
     
-//    func addNewEventToGGCalendar(name: String, time:String, description:String ) {
-//        let calendarEvent = GTLRCalendar_Event()
-//
-//        calendarEvent.summary = name
-//        calendarEvent.descriptionProperty = description
-//        calendarEvent.organizer = GIDSignIn.sharedInstance()?.currentUser
-//
-//        let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
-//
-//        service.executeQuery(insertQuery) { (ticket, object, error) in
-//            if error == nil {
-//                print("Event inserted")
-//            } else {
-//                print("Error is \(error!)")
-//            }
-//        }
-//    }
-//
+    //    func addNewEventToGGCalendar(name: String, time:String, description:String ) {
+    //        let calendarEvent = GTLRCalendar_Event()
+    //
+    //        calendarEvent.summary = name
+    //        calendarEvent.descriptionProperty = description
+    //        calendarEvent.organizer = GIDSignIn.sharedInstance()?.currentUser
+    //
+    //        let insertQuery = GTLRCalendarQuery_EventsInsert.query(withObject: calendarEvent, calendarId: "primary")
+    //
+    //        service.executeQuery(insertQuery) { (ticket, object, error) in
+    //            if error == nil {
+    //                print("Event inserted")
+    //            } else {
+    //                print("Error is \(error!)")
+    //            }
+    //        }
+    //    }
+    //
     
 }

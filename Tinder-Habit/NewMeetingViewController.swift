@@ -13,7 +13,15 @@ import Kingfisher
 //import FirebaseDatabase
 
 
-class NewMeetingViewController: UIViewController {
+class NewMeetingViewController: UIViewController, PassDataDelegate {
+    
+    var profileImagePath: String = String()
+    
+    func passData(profileImageUrl: URL) {
+        let url = profileImageUrl
+        profileImagePath = url.absoluteString
+    }
+    
     var userHandler:UserHandler = UserHandler()
     let databaseRef = Database.database().reference()
     
@@ -21,7 +29,8 @@ class NewMeetingViewController: UIViewController {
         super.viewDidLoad()
         
         userHandler.getAllUsers()
-
+        let profileImageURL = URL(string: profileImagePath)
+        profileImageView.kf.setImage(with: profileImageURL)
     }
     
     @IBAction func editMeeting(_ sender: Any) {
@@ -31,6 +40,8 @@ class NewMeetingViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     
     
+    
+}
 //    databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
 //        guard let value = snapshot.value as? User else {
 //            return
@@ -38,4 +49,4 @@ class NewMeetingViewController: UIViewController {
 //        let imageUrl = value.profileImageUrl
 //        print("image url is \(String(describing: imageUrl?.absoluteString))")
 //    })
-}
+

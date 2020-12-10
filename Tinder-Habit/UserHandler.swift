@@ -25,35 +25,35 @@ class UserHandler {
         databaseRef.child("users/\(user.googleUserId)/fullName").setValue(user.fullName)
         databaseRef.child("users/\(user.googleUserId)/googleUserId").setValue(user.googleUserId)
         
-
+        
         return user
     }
     
     func getAllUsers() {
         databaseRef.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
-          // Get user value
+            // Get user value
             let value = snapshot.value as? NSDictionary
-         
-            }) { (error) in
-              print(error.localizedDescription)
-          }
             
-            
-            
-            
-            
-//    func getProfileImageUrl(user:User) {
-//
-//        databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
-//            guard let value = snapshot.value as? User else {
-//                return
-//            }
-//            let imageUrl = value.profileImageUrl
-//            print("image url is \(String(describing: imageUrl.absoluteString))")
-//        })
-//
-//    }
-    
-    
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+        
+        
+        
+        //    func getProfileImageUrl(user:User) {
+        //
+        //        databaseRef.child(user.googleUserId).observeSingleEvent(of: .value, with: { snapshot in
+        //            guard let value = snapshot.value as? User else {
+        //                return
+        //            }
+        //            let imageUrl = value.profileImageUrl
+        //            print("image url is \(String(describing: imageUrl.absoluteString))")
+        //        })
+        //
+        //    }
+        
+        
     }
 }
