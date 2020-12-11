@@ -239,7 +239,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="calendar" catalog="system" id="coD-oO-EZt"/>
                     <connections>
-                        <outlet property="bioText" destination="qld-t3-Mes" id="jw8-BJ-yWl"/>
+                        <outlet property="bioText" destination="qld-t3-Mes" id="YY3-Mq-Kad"/>
                         <outlet property="profileImage" destination="wS0-8O-Y4v" id="SJt-VF-NV3"/>
                         <outlet property="userName" destination="x5M-1m-EVd" id="lGp-Bu-bc8"/>
                     </connections>

@@ -1,10 +1,4 @@
-//
-//  UserHandler.swift
-//  Tinder-Habit
-//
-//  Created by Trang Doan on 12/8/20.
-//  Copyright © 2020 Trang Doan. All rights reserved.
-//
+
 
 import Foundation
 import FirebaseDatabase
@@ -19,7 +13,8 @@ class UserHandler {
     
   
   func getAllUsers(closure: ([User]) -> Void) {}
-  func storeUser(user: User, closure: (Bool) -> Void) {
+  func storeUser(user: User) {
+//  func storeUser(user: User, closure: (Bool) -> Void) {
         //send to Firebase
         
         //set key "profileImageUrl" to
@@ -27,12 +22,11 @@ class UserHandler {
         databaseRef.child("users/\(user.googleUserId)/fullName").setValue(user.fullName)
         databaseRef.child("users/\(user.googleUserId)/googleUserId").setValue(user.googleUserId)
         
-        
-        return user
+//        return user
     }
   
     func createMatch(userID1:String, userID2:String, closure: (Bool) -> Void) {}
-    func getCurrentUser() -> User { }
+//    func getCurrentUser() -> User { }
     
     func getAllUsers() {
         databaseRef.child("users").observeSingleEvent(of: .value, with: { (snapshot) in
