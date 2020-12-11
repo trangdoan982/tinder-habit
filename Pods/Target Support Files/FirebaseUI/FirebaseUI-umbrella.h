@@ -26,7 +26,9 @@
 #import "FUIPrivacyAndTermsOfServiceView.h"
 #import "FUIAuthTableViewCell.h"
 #import "FUIAuthTableHeaderView.h"
+#import "FirebaseGoogleAuthUI 2.h"
 #import "FirebaseGoogleAuthUI.h"
+#import "FUIGoogleAuth 2.h"
 #import "FUIGoogleAuth.h"
 
 FOUNDATION_EXPORT double FirebaseUIVersionNumber;

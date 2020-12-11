@@ -7,19 +7,25 @@
 //
 
 import UIKit
+import Koloda
+import TinyConstraints
+import Kingfisher
+import Charts
 
 class DashboardViewController: UIViewController {
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    updateUI()
-    view.addSubview(lineChartView)
-    lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
     
-    lineChartView.width(350)
-    lineChartView.height(250)
     
-    setData()
-  }
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    
+    @IBOutlet weak var userName: UILabel!
+    
+    
+    @IBOutlet weak var bioText: UILabel!
+    
+    
+    
+  
   
   let userInfo:[String:String] = [
     "username": "Hello, Robert",
@@ -51,6 +57,23 @@ class DashboardViewController: UIViewController {
     return chartView
   }()
   
+    
+    
+    
+    override func viewDidLoad() {
+      super.viewDidLoad()
+      updateUI()
+      view.addSubview(lineChartView)
+      lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
+      
+      lineChartView.width(350)
+      lineChartView.height(250)
+      
+      setData()
+    }
+
+    
+    
   func updateUI(){
     profileImage.kf.setImage(with: URL(string: self.userInfo["profileImageURL"]!))
     self.userName.text = userInfo["username"]

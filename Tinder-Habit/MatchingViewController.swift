@@ -7,8 +7,20 @@
 //
 
 import UIKit
+import Koloda
+import Kingfisher
+
 
 class MatchingViewController: UIViewController {
+    
+    
+    
+    
+    @IBOutlet weak var kolodaView: KolodaView!
+    
+    
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -53,4 +65,17 @@ class MatchingViewController: UIViewController {
     imageView.kf.setImage(with: url)
     return imageView
   }
+    
+    @IBAction func xButtonTapped(_ sender: Any) {
+        kolodaView.swipe(.left)
+    }
+    
+    
+    @IBAction func heartButtonTapped(_ sender: Any) {
+        
+        kolodaView.swipe(.right)
+    }
+    
+    
+    
 }
