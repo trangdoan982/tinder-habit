@@ -43,6 +43,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="2Ob-An-GPQ" kind="presentation" identifier="logInToHome" id="8tG-t5-5wj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -71,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROG-wG-CEm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4530" y="923"/>
+            <point key="canvasLocation" x="1080" y="244"/>
         </scene>
         <!--Create Meeting-->
         <scene sceneID="MDM-xY-fWd">
@@ -196,7 +199,7 @@
             <objects>
                 <viewController id="tnq-NL-IgI" userLabel="Dashboard " customClass="DashboardViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0ai-Ab-cO6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5M-1m-EVd">
@@ -210,20 +213,6 @@
                                 <rect key="frame" x="0.0" y="74" width="173" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OlH-JM-Tc9">
-                                <rect key="frame" x="0.0" y="211" width="64" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bioText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qld-t3-Mes">
-                                <rect key="frame" x="0.0" y="239" width="394" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sk-in-PeP">
                                 <rect key="frame" x="31" y="279" width="158" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -237,15 +226,22 @@
                                     <segue destination="DCK-j7-nFm" kind="presentation" identifier="editMeeting" id="YWN-8G-Rgn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bioText" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qld-t3-Mes">
+                                <rect key="frame" x="0.0" y="221" width="394" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="chx-k6-23x"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dashboard" image="calendar" catalog="system" id="coD-oO-EZt"/>
                     <connections>
-                        <outlet property="bioText" destination="qld-t3-Mes" id="fgr-Sh-G6b"/>
-                        <outlet property="profileImage" destination="wS0-8O-Y4v" id="KuG-Uf-qkq"/>
-                        <outlet property="userName" destination="x5M-1m-EVd" id="ghb-Qo-JcF"/>
+                        <outlet property="bioText" destination="qld-t3-Mes" id="jw8-BJ-yWl"/>
+                        <outlet property="profileImage" destination="wS0-8O-Y4v" id="SJt-VF-NV3"/>
+                        <outlet property="userName" destination="x5M-1m-EVd" id="lGp-Bu-bc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oRw-Mw-7de" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,7 +253,7 @@
             <objects>
                 <viewController id="ght-u7-H9U" userLabel="Matching" customClass="MatchingViewController" customModule="Tinder_Habit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AwE-GX-eXO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VrX-Ly-GWJ" customClass="KolodaView" customModule="Koloda">
@@ -289,7 +285,7 @@
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="kolodaView" destination="VrX-Ly-GWJ" id="LT7-fW-rkw"/>
+                        <outlet property="kolodaView" destination="VrX-Ly-GWJ" id="AVJ-dj-8w5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bez-S3-hq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -305,6 +301,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <connections>
+                        <segue destination="tnq-NL-IgI" kind="relationship" relationship="viewControllers" id="2hA-yf-6F2"/>
+                        <segue destination="ght-u7-H9U" kind="relationship" relationship="viewControllers" id="rpA-RZ-Xvn"/>
+                    </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YR8-Fu-aQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

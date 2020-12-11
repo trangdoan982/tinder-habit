@@ -9,7 +9,7 @@
 import UIKit
 
 class FakeUserHandler: UserHandler {
-  func getAllUsers(closure: ([User]) -> Void) {
+  overrid func getAllUsers(closure: ([User]) -> Void) {
     closure(
       [
       User(googleUserId: "1",

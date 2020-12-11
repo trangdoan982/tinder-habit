@@ -10,6 +10,7 @@ target 'Tinder-Habit' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase'
   pod 'FirebaseUI/Google'
+  pod 'Firebase/Database'
   
   pod 'DropDown'
   pod 'GoogleAPIClientForREST/Calendar'

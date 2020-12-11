@@ -10,13 +10,17 @@ import UIKit
 import GoogleSignIn
 import Firebase
 import Kingfisher
+import Charts
 
 
 class DashboardViewController: UIViewController {
   
-  var userHandler:UserHandler = FakeUserHandler()
+//  var userHandler:UserHandler = FakeUserHandler()
   
-  override func viewDidLoad() {
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var bioText: UILabel!
+    override func viewDidLoad() {
     super.viewDidLoad()
     updateUI()
     
@@ -24,11 +28,13 @@ class DashboardViewController: UIViewController {
     view.addSubview(lineChartView)
     lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
     
+    
     lineChartView.width(350)
     lineChartView.height(250)
     
+    
     setData()
-    self.user = userHandler.currentUser()
+//    self.user = userHandler.currentUser()
   }
   
   let userInfo:[String:String] = [
@@ -105,7 +111,7 @@ class DashboardViewController: UIViewController {
     
     //Edit new meeting with a buddy
     @IBAction func createNewMeetingButton(_ sender: Any) {
-        self.performSegue(withIdentifier: "editMeeting", sender: self)
+        performSegue(withIdentifier: "editMeeting", sender: self)
     }
     
 }

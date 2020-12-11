@@ -7,24 +7,22 @@
 //
 
 import UIKit
+import Koloda
 
-class MatchingViewController: UIViewController {
+class MatchingViewController: UIViewController, KolodaViewDataSource, KolodaViewDelegate {
   
-  var userHandler = FakeUserHandler()   //
+//  var userHandler = FakeUserHandler()
   
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var kolodaView: KolodaView!
     
-    // Do any additional setup after loading the view.
-  }
   var potentialMatches: [User] = []
   var profileBio: [String] = []
   override func viewDidLoad() {
     super.viewDidLoad()
-    userHandler.getAllUsers { (users) in
+//    userHandler.getAllUsers { (users) in
       potentialMatches = users
-      // kolodaView.reloadData()
+       kolodaView.reloadData()
     }
     
     kolodaView.dataSource = self
@@ -40,10 +38,10 @@ class MatchingViewController: UIViewController {
   func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
     let selectedUser = users[index]
     
-    userHandler.createMatch(userId1: selectedUser!.googleUserId) {
-      success in
-      print("successfully stored? \(success)")
-    }
+//    userHandler.createMatch(userId1: selectedUser!.googleUserId) {
+//      success in
+//      print("successfully stored? \(success)")
+//    }
   }
   
   func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {

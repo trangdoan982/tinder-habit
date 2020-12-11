@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 if let currentUser = GIDSignIn.sharedInstance()?.currentUser {
                     self.profileImageUrl = currentUser.profile.imageURL(withDimension: 500)!
                     self.fullName = currentUser.profile.name!
-                    let tinderHabitUser = User(googleUserId: currentUser.userID!, profileImageUrl: self.profileImageUrl!, fullName: self.fullName!)
+                    let tinderHabitUser = User(googleUserId: currentUser.userID!, profileImageUrl: self.profileImageUrl!, fullName: self.fullName!, bioText: "")
                     
                     self.userHandler.storeUser(user: tinderHabitUser)
                     
@@ -60,7 +60,7 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                     self.navigationController?.pushViewController(newMeetingVC, animated: true)
                 }
                 
-//                self.performSegue(withIdentifier: "logInToHome", sender: self)
+                self.performSegue(withIdentifier: "logInToHome", sender: self)
             }
         }
     }
