@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
+import Kingfisher
+
 
 class DashboardViewController: UIViewController {
   
@@ -15,6 +19,8 @@ class DashboardViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     updateUI()
+    
+    //Create chart to track habit
     view.addSubview(lineChartView)
     lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
     
@@ -95,4 +101,11 @@ class DashboardViewController: UIViewController {
     ChartDataEntry(x: 25.0, y: 25.0),
     ChartDataEntry(x: 29.0, y: 30.1)
   ]
+    
+    
+    //Edit new meeting with a buddy
+    @IBAction func createNewMeetingButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "editMeeting", sender: self)
+    }
+    
 }
