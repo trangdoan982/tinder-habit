@@ -20,23 +20,12 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var bioText: UILabel!
-    override func viewDidLoad() {
-    super.viewDidLoad()
-    updateUI()
-    
-    //Create chart to track habit
-    view.addSubview(lineChartView)
-    lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
     
     
-    lineChartView.width(350)
-    lineChartView.height(250)
     
     
-    setData()
-//    self.user = userHandler.currentUser()
-  }
-  
+    
+
   let userInfo:[String:String] = [
     "username": "Hello, Robert",
     "profileImageURL": "https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg",
@@ -66,6 +55,28 @@ class DashboardViewController: UIViewController {
     return chartView
   }()
   
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateUI()
+        
+        //Create chart to track habit
+        view.addSubview(lineChartView)
+        lineChartView.center(in: view, offset: CGPoint(x: 0, y: 63))
+        
+        
+        lineChartView.width(350)
+        lineChartView.height(250)
+        
+        
+        setData()
+        //    self.user = userHandler.currentUser()
+    }
+    
+    
+    
+    
+    
   func updateUI(){
     profileImage.kf.setImage(with: URL(string: self.userInfo["profileImageURL"]!))
     self.userName.text = userInfo["username"]

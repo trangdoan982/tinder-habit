@@ -14,7 +14,7 @@ class MatchingViewController: UIViewController, KolodaViewDataSource, KolodaView
 //  var userHandler = FakeUserHandler()
   
   
-    @IBOutlet weak var kolodaView: KolodaView!
+@IBOutlet weak var kolodaView: KolodaView!
     
   var potentialMatches: [User] = []
   var profileBio: [String] = []
