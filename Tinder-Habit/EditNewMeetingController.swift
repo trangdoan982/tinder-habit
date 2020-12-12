@@ -33,8 +33,8 @@ class EditNewMeetingController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        descriptionTextView.layer.cornerRadius = 10
-        createCheckMeeting.layer.cornerRadius = 10
+        descriptionTextView.layer.cornerRadius = 15
+        createCheckMeeting.layer.cornerRadius = 15
         menu.anchorView = buddySelection
         
         buddyTap.numberOfTapsRequired = 1

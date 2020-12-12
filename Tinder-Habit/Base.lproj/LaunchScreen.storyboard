@@ -15,8 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9tN-yx-PYV">
-                                <rect key="frame" x="139" y="385" width="136" height="127"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="launch screen background" translatesAutoresizingMaskIntoConstraints="NO" id="xn5-rq-kry">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="promise-drawing-120" translatesAutoresizingMaskIntoConstraints="NO" id="9tN-yx-PYV">
+                                <rect key="frame" x="139" y="383.5" width="136" height="129.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="136" id="2G5-Bm-tDO"/>
                                     <constraint firstAttribute="height" constant="129.5" id="egL-IE-MjD"/>
@@ -37,6 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.2" catalog="system" width="128" height="81"/>
+        <image name="launch screen background" width="626" height="417"/>
+        <image name="promise-drawing-120" width="120" height="120"/>
     </resources>
 </document>

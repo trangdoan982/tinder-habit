@@ -7,12 +7,12 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var bioText: UILabel!
-    
-
     @IBOutlet weak var newMeetingButton: UIButton!
+    @IBOutlet weak var bioTextField: UITextView!
     
-   
+    
+    
+    var userhandler:UserHandler = UserHandler()
     
     let userInfo:[String:String] = [
       "username": "Hello, Celine",
@@ -32,7 +32,6 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         yAxis.labelTextColor = .black
         yAxis.axisLineColor = .black
         
-        
         chartView.xAxis.labelPosition = .bottom
         chartView.xAxis.labelFont = .boldSystemFont(ofSize: 12)
         chartView.xAxis.setLabelCount(6, force: false)
@@ -40,11 +39,6 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         
         chartView.animate(xAxisDuration: 4.0)
   
-        
-        //chartView.chartDescription?.text = "Days of the month"
-        //chartView.chartDescription?.text = "Days of the month"
-//        chartView.chartDescription?.font = UIFont(name:"futura",size:12)!
-//        chartView.chartDescription?.textAlign = NSTextAlignment.left
         return chartView
     }()
     
@@ -53,7 +47,7 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
           super.viewDidLoad()
           updateUI()
         view.addSubview(lineChartView)
-        lineChartView.center(in: view, offset: CGPoint(x: 0, y: 45))
+        lineChartView.center(in: view, offset: CGPoint(x: 0, y: 70))
         
         lineChartView.width(370)
         lineChartView.height(270)
@@ -65,8 +59,13 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
       }
     
     func updateUI(){
-      profileImage.kf.setImage(with: URL(string: self.userInfo["profileImageURL"]!))
-      self.userName.text = userInfo["username"]
+        userhandler.getCurrentUser { (user) in
+            let profileImageURL = URL(string: user.profileImageUrl)
+            self.profileImage.kf.setImage(with: profileImageURL)
+            self.userName.text = user.fullName
+            self.bioTextField.text = "Hi there, it's \(user.fullName), trying to build a new habit"
+            self.profileImage.setRounded()
+        }
     }
     
     
@@ -111,4 +110,13 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         performSegue(withIdentifier: "editMeeting", sender: self)
     }
     
+}
+
+extension UIImageView {
+
+   func setRounded() {
+    let radius = self.frame.width / 2
+      self.layer.cornerRadius = radius
+      self.layer.masksToBounds = true
+   }
 }

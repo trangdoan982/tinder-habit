@@ -10,11 +10,11 @@ import Foundation
 
 struct User {
     var googleUserId: String
-    var profileImageUrl: URL
+    var profileImageUrl: String
     var fullName: String
     var bioText:String?
     
-  init(googleUserId: String, profileImageUrl:URL, fullName:String, bioText:String?) {
+  init(googleUserId: String, profileImageUrl:String, fullName:String, bioText:String?) {
         self.googleUserId = googleUserId
         self.profileImageUrl = profileImageUrl
         self.fullName = fullName

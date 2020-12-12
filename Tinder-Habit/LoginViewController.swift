@@ -16,8 +16,12 @@ protocol PassDataDelegate {
 }
 class LoginViewController: UIViewController, GIDSignInDelegate {
     
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var logInButton: GIDSignInButton!
+    
+    
     var userHandler:UserHandler = UserHandler()
-    var profileImageUrl: URL?
+    var profileImageUrl: String?
     var fullName: String?
     
     var logInSuccessful: Bool = false
@@ -29,6 +33,9 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
            
            GIDSignIn.sharedInstance()?.presentingViewController = self
            GIDSignIn.sharedInstance().delegate = self
+        
+        self.logoImageView.layer.cornerRadius = 30
+        self.logInButton.layer.cornerRadius = 15
            
        }
     
@@ -47,17 +54,12 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
                 self.logInSuccessful = true
                 //store the image
                 if let currentUser = GIDSignIn.sharedInstance()?.currentUser {
-                    self.profileImageUrl = currentUser.profile.imageURL(withDimension: 500)!
+                    self.profileImageUrl = currentUser.profile.imageURL(withDimension: 500)!.absoluteString
                     self.fullName = currentUser.profile.name!
                     let tinderHabitUser = User(googleUserId: currentUser.userID!, profileImageUrl: self.profileImageUrl!, fullName: self.fullName!, bioText: "")
                     
                     self.userHandler.storeUser(user: tinderHabitUser)
                     
-                    let newMeetingVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "newMeetingViewController") as! NewMeetingViewController
-                    self.delegate = newMeetingVC
-                    self.delegate?.passData(profileImageUrl: self.profileImageUrl!)
-                    
-                    self.navigationController?.pushViewController(newMeetingVC, animated: true)
                 }
                 
                 self.performSegue(withIdentifier: "logInToHome", sender: self)
@@ -65,9 +67,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
         }
     }
     
-    @IBAction func googleBtnTapped(_ sender: Any) {
-    
-    }
 
    
 }
