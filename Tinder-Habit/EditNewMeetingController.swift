@@ -26,11 +26,15 @@ class EditNewMeetingController: UIViewController {
     @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
     
+    @IBOutlet weak var createCheckMeeting: UIButton!
+    
+    
     private let service = GTLRCalendarService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        descriptionTextView.layer.cornerRadius = 15
+        createCheckMeeting.layer.cornerRadius = 15
         menu.anchorView = buddySelection
         
         buddyTap.numberOfTapsRequired = 1
