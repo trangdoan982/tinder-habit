@@ -103,9 +103,11 @@ Optional:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| username | String | Unique Id for a user |
-| password | Pointer to username | encrypted when stored in the Parse Cloud and never returned to any client request. |
-| createdAt | DateTime | date when the username/password is created (default field) |
+| googleUserId | String | Unique Id for a user |
+| fullName | String | User's full name |
+| profileImageUrl | String | profile image URL string  |
+| bioText | String | Short introduction|
+| buddies | Array | List of matched habit trackers/ buddies|
 
 **List of Habits:**
 
