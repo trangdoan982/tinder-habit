@@ -10,17 +10,19 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
     @IBOutlet weak var bioText: UILabel!
     
 
+    @IBOutlet weak var newMeetingButton: UIButton!
     
+   
     
     let userInfo:[String:String] = [
-      "username": "Hello, Robert",
-      "profileImageURL": "https://preview.keenthemes.com/metronic-v4/theme/assets/pages/media/profile/profile_user.jpg"
+      "username": "Hello, Celine",
+      "profileImageURL": "https://expertphotography.com/wp-content/uploads/2018/10/cool-profile-picture-natural-light.jpg"
     ]
     
     
     lazy var lineChartView: LineChartView = {
         let chartView = LineChartView()
-        chartView.backgroundColor = UIColor(displayP3Red: 1.0, green: 0.8, blue: 0.9, alpha: 0.5 )
+        chartView.backgroundColor = UIColor(red: 1, green: 0.9765, blue: 0.9176, alpha: 1.0)
         
         chartView.rightAxis.enabled = false
         
@@ -37,6 +39,12 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         chartView.xAxis.labelTextColor = .black
         
         chartView.animate(xAxisDuration: 4.0)
+  
+        
+        //chartView.chartDescription?.text = "Days of the month"
+        //chartView.chartDescription?.text = "Days of the month"
+//        chartView.chartDescription?.font = UIFont(name:"futura",size:12)!
+//        chartView.chartDescription?.textAlign = NSTextAlignment.left
         return chartView
     }()
     
@@ -47,10 +55,12 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         view.addSubview(lineChartView)
         lineChartView.center(in: view, offset: CGPoint(x: 0, y: 45))
         
-        lineChartView.width(350)
-        lineChartView.height(250)
+        lineChartView.width(370)
+        lineChartView.height(270)
         
         setData()
+        
+        newMeetingButton.layer.cornerRadius = 10
         
       }
     
@@ -69,7 +79,7 @@ class DashboardViewController: UIViewController, ChartViewDelegate {
         let set1 = LineChartDataSet(entries: yValues, label: "Your Progress")
         
        // set1.mode = .cubicBezier
-        set1.lineWidth = 2
+        set1.lineWidth = 1.5
         set1.setColor(.black)
         set1.setCircleColor(.black)
         set1.circleRadius = 5

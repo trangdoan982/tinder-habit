@@ -6,10 +6,7 @@ target 'Tinder-Habit' do
   use_frameworks!
 
   # Pods for Tinder-Habit
-
-  pod 'GoogleSignIn'
-
-
+  
   pod 'FirebaseUI/Auth'
   pod 'Firebase'
   pod 'FirebaseUI/Google'
@@ -22,7 +19,7 @@ target 'Tinder-Habit' do
   pod 'Charts'
   pod 'TinyConstraints'
   pod 'Koloda'
-
+  
 
   target 'Tinder-HabitTests' do
     inherit! :search_paths

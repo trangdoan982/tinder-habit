@@ -125,7 +125,6 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Google
   - GoogleAPIClientForREST/Calendar
-  - GoogleSignIn
   - Kingfisher
   - Koloda
   - TinyConstraints
@@ -185,6 +184,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 1f7c93ed158bfd6c4a9017f77ed16deb3f75d2ec
+PODFILE CHECKSUM: 745ecf03ffeb109773c067adc3eb5d274a90c33e
 
 COCOAPODS: 1.9.3
